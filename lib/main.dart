@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intership_one/Home/bottom.dart';
-import 'package:intership_one/Home/home.dart';
+
 
 void main() {
   runApp(const MyApp());

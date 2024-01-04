@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("E-learnig",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
+                Text("E-learning",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
                 CircleAvatar(
                   radius: 30,
                   backgroundColor: Colors.black,
