@@ -7,7 +7,6 @@ class BestMentorCard extends StatelessWidget {
 
   final List<String> assetPaths = [
     "assets/nature1.png",
-    "assets/nature4.jpg",
     "assets/nature5.jpg",
 
   ];
@@ -36,9 +35,15 @@ class BestMentorCard extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
+                  
                   Card(
+                     shape: RoundedRectangleBorder(  
+            borderRadius: BorderRadius.circular(15.0),  
+          ),  
+                    elevation: 4.0,
+                    
                    child: Image.asset(
-                    assetPaths[index % assetPaths.length], fit: BoxFit.fill,
+                    assetPaths[index % assetPaths.length], fit: BoxFit.cover,
                    ),
                     color: Colors.black.withOpacity(0.3),
 

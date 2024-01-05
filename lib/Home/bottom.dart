@@ -17,8 +17,8 @@ int currentState = 0;
 final _pages = [
 
   Home(),
+  Thunder(),
   SettingsPage(),
-  Thunder()
 ];
 
   @override
@@ -42,9 +42,9 @@ final _pages = [
         
         
         items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home),label: ""),
-        BottomNavigationBarItem(icon: Icon(Icons.electric_bolt),label: ""),
-        BottomNavigationBarItem(icon: Icon(Icons.settings),label: ""),
+        BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.electric_bolt),label: "Category"),
+        BottomNavigationBarItem(icon: Icon(Icons.settings),label: "Settings"),
         
       ]),
     );
