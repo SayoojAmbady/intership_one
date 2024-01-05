@@ -9,6 +9,8 @@ class CustomText extends StatelessWidget {
   final double? trailingFontSize; 
   final FontWeight? trailingFontWeight; 
   final Color? trailingColor; 
+  final String? avatarImageUrl;
+  final double avatarRadius;
 
   CustomText({
     required this.text,
@@ -19,6 +21,9 @@ class CustomText extends StatelessWidget {
     this.trailingFontSize = 12.0,
     this.trailingFontWeight = FontWeight.normal,
     this.trailingColor = Colors.blue,
+    this.avatarImageUrl,
+    this.avatarRadius = 30.0,
+
   });
 
   @override
@@ -43,6 +48,11 @@ class CustomText extends StatelessWidget {
               color: trailingColor ?? color, 
             ),
           ),
+          if(avatarImageUrl != null)
+          CircleAvatar(
+            radius: avatarRadius,
+            backgroundImage: NetworkImage(avatarImageUrl!),
+          )
       ],
     );
   }

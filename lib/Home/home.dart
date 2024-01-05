@@ -20,44 +20,24 @@ class _HomeState extends State<Home> {
       body: SafeArea(child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(children: [
-      
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("E-learning",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
-                CircleAvatar(
-                  radius: 30,
-                  backgroundColor: Colors.black,
-                  backgroundImage: NetworkImage("https://i.pinimg.com/736x/3a/a5/d2/3aa5d2972b86e995c9926cd962cf26d2.jpg"),
-                )
-              ],
-            ),
-          ),
-      
+          SizedBox(height: 40,),
+        CustomText(
+          text: "E-Learning",
+          avatarImageUrl: "https://i.pinimg.com/736x/3a/a5/d2/3aa5d2972b86e995c9926cd962cf26d2.jpg",),
+        SizedBox(height: 45,),
           CustomSearchBar(),
           ChipWidget(),
           CustomText(
             text: "Best Mentors",
             trailingText: "See all",),
-      
           BestMentorCard(),
           SizedBox(height: 10),
-
           CustomText(
             text: "Class Preview",
             trailingText: "see all",),
           PreviewWidget()
-      
-         
-          
-      
-        ],),
+      ],),
       )),
-
-
-
-    );
+);
   }
 }
