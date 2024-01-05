@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intership_one/widgets/bestmentorcard.dart';
 import 'package:intership_one/widgets/chipwidget.dart';
 import 'package:intership_one/widgets/classpreviewwidget.dart';
+import 'package:intership_one/widgets/customtext.dart';
+import 'package:intership_one/widgets/customtextseeall.dart';
 import 'package:intership_one/widgets/search_bar.dart';
 
 class Home extends StatefulWidget {
@@ -43,13 +45,12 @@ class _HomeState extends State<Home> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Best mentor",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
-                Text("see all",style: TextStyle(color: Colors.blue
-                  
-                ),)
+             CustomText(text: "Best Mentors"),
+             CustomTextseeall(text: "see all"),
               ],
             ),
           ),
+          
       
           BestMentorCard(),
 
@@ -58,10 +59,8 @@ class _HomeState extends State<Home> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Class Preview",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25),),
-                Text("see all",style: TextStyle(color: Colors.blue
-                  
-                ),)
+              CustomText(text: "Class Preview"),
+              CustomTextseeall(text: "see all"),
               ],
             ),
           ),

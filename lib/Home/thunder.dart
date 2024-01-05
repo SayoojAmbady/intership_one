@@ -11,17 +11,10 @@ class _ThunderState extends State<Thunder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-
-          child: Column(children: [
-
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text("Choose  \n Your Category",style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),),
-            )
-          ],),
-        
+      body: SafeArea(child: Container(
+        height: double.infinity,
+        width: double.infinity,
+        child: Text("Choose\n Category",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)
       )),
     );
   }
