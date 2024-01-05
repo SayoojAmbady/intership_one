@@ -3,7 +3,6 @@ import 'package:intership_one/widgets/bestmentorcard.dart';
 import 'package:intership_one/widgets/chipwidget.dart';
 import 'package:intership_one/widgets/classpreviewwidget.dart';
 import 'package:intership_one/widgets/customtext.dart';
-import 'package:intership_one/widgets/customtextseeall.dart';
 import 'package:intership_one/widgets/search_bar.dart';
 
 class Home extends StatefulWidget {
@@ -39,31 +38,16 @@ class _HomeState extends State<Home> {
       
           CustomSearchBar(),
           ChipWidget(),
-      
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-             CustomText(text: "Best Mentors"),
-             CustomTextseeall(text: "see all"),
-              ],
-            ),
-          ),
-          
+          CustomText(
+            text: "Best Mentors",
+            trailingText: "See all",),
       
           BestMentorCard(),
+          SizedBox(height: 10),
 
-          Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-              CustomText(text: "Class Preview"),
-              CustomTextseeall(text: "see all"),
-              ],
-            ),
-          ),
+          CustomText(
+            text: "Class Preview",
+            trailingText: "see all",),
           PreviewWidget()
       
          

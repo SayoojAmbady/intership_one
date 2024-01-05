@@ -37,12 +37,7 @@ class BestMentorCard extends StatelessWidget {
                 children: [
                   
                   Card(
-                     shape: RoundedRectangleBorder(  
-            borderRadius: BorderRadius.circular(15.0),  
-          ),  
-                    elevation: 4.0,
-                    
-                   child: Image.asset(
+                child: Image.asset(
                     assetPaths[index % assetPaths.length], fit: BoxFit.cover,
                    ),
                     color: Colors.black.withOpacity(0.3),

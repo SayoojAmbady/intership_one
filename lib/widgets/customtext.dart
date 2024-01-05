@@ -5,24 +5,45 @@ class CustomText extends StatelessWidget {
   final double fontSize;
   final FontWeight fontWeight;
   final Color color;
+  final String? trailingText;
+  final double? trailingFontSize; 
+  final FontWeight? trailingFontWeight; 
+  final Color? trailingColor; 
 
   CustomText({
     required this.text,
     this.fontSize = 25.0,
     this.fontWeight = FontWeight.bold,
     this.color = Colors.black,
+    this.trailingText,
+    this.trailingFontSize = 12.0,
+    this.trailingFontWeight = FontWeight.normal,
+    this.trailingColor = Colors.blue,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      textAlign: TextAlign.left,
-      style: TextStyle(
-        fontSize: fontSize,
-        fontWeight: fontWeight,
-        color: color,
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          text,
+          style: TextStyle(
+            fontSize: fontSize,
+            fontWeight: fontWeight,
+            color: color,
+          ),
+        ),
+        if (trailingText != null)
+          Text(
+            trailingText!,
+            style: TextStyle(
+              fontSize: trailingFontSize ?? fontSize, 
+              fontWeight: trailingFontWeight ?? fontWeight, 
+              color: trailingColor ?? color, 
+            ),
+          ),
+      ],
     );
   }
 }
