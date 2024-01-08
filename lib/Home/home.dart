@@ -16,28 +16,41 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body: SafeArea(child: SingleChildScrollView(
+      body: SafeArea(
+          child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Column(children: [
-          SizedBox(height: 40,),
-        CustomText(
-          text: "E-Learning",
-          avatarImageUrl: "https://i.pinimg.com/736x/3a/a5/d2/3aa5d2972b86e995c9926cd962cf26d2.jpg",),
-        SizedBox(height: 45,),
-          CustomSearchBar(),
-          ChipWidget(),
-          CustomText(
-            text: "Best Mentors",
-            trailingText: "See all",),
-          BestMentorCard(),
-          SizedBox(height: 10),
-          CustomText(
-            text: "Class Preview",
-            trailingText: "see all",),
-          PreviewWidget()
-      ],),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+          child: Column(
+            children: [
+              SizedBox(
+                height: 40,
+              ),
+              CustomText(
+                text: "E-Learning",
+                avatarImageUrl:
+                    "https://i.pinimg.com/736x/3a/a5/d2/3aa5d2972b86e995c9926cd962cf26d2.jpg",
+              ),
+              SizedBox(
+                height: 40,
+              ),
+              CustomSearchBar(),
+              ChipWidget(),
+              CustomText(
+                text: "Best Mentors",
+                trailingText: "See all",
+              ),
+              BestMentorCard(),
+              SizedBox(height: 10),
+              CustomText(
+                text: "Class Preview",
+                trailingText: "see all",
+              ),
+              PreviewWidget()
+            ],
+          ),
+        ),
       )),
-);
+    );
   }
 }

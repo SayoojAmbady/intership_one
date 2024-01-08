@@ -11,42 +11,32 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
+  int currentState = 0;
 
-int currentState = 0;
-
-final _pages = [
-
-  Home(),
-  Thunder(),
-  SettingsPage(),
-];
+  final _pages = [
+    Home(),
+    Thunder(),
+    SettingsPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: _pages[currentState],
-
       bottomNavigationBar: BottomNavigationBar(
-
-        currentIndex: currentState,
-        onTap: (newIndex) {
-
-          setState(() {
-
-            currentState = newIndex;
-            
-          });
-          
-        },
-        
-        
-        items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-        BottomNavigationBarItem(icon: Icon(Icons.electric_bolt),label: "Category"),
-        BottomNavigationBarItem(icon: Icon(Icons.settings),label: "Settings"),
-        
-      ]),
+          currentIndex: currentState,
+          onTap: (newIndex) {
+            setState(() {
+              currentState = newIndex;
+            });
+          },
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.electric_bolt), label: "Category"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.settings), label: "Settings"),
+          ]),
     );
   }
 }

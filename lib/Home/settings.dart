@@ -6,12 +6,17 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-       body: SafeArea(child: SingleChildScrollView(
+      body: SafeArea(
+          child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
-        child: Column(children: [
-          Text("Settings",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),)
-        ],),
+        child: Column(
+          children: [
+            Text(
+              "Settings",
+              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
       )),
     );
   }
