@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intership_one/widgets/customtext.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -11,10 +12,7 @@ class SettingsPage extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            Text(
-              "Settings",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-            )
+           CustomText(text: "Settings",fontSize: 30,fontWeight: FontWeight.bold,)
           ],
         ),
       )),

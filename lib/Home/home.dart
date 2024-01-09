@@ -44,6 +44,7 @@ class _HomeState extends State<Home> {
               SizedBox(height: 10),
               CustomText(
                 text: "Class Preview",
+                
                 trailingText: "see all",
               ),
               PreviewWidget()

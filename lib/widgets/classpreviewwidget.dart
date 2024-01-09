@@ -4,9 +4,11 @@ class PreviewWidget extends StatelessWidget {
   PreviewWidget({super.key});
 
   final List<String> imagesPath = [
-    "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?cs=srgb&dl=pexels-james-wheeler-417074.jpg&fm=jpg",
-    "https://cdn.pixabay.com/photo/2015/06/19/21/24/avenue-815297_640.jpg",
-    "https://c4.wallpaperflare.com/wallpaper/297/22/531/lake-blue-moonlight-moon-wallpaper-preview.jpg",
+     "assets/images/nature1.png",
+     "assets/images/nature2.png",
+     "assets/images/nature3.jpg",
+     "assets/images/nature4.jpg",
+     "assets/images/nature5.jpg",
   ];
 
   @override
@@ -20,7 +22,7 @@ class PreviewWidget extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(12.0),
               child: Container(
-                child: Image.network(
+                child: Image.asset(
                   imagesPath[index % imagesPath.length],
                   fit: BoxFit.fill,
                 ),

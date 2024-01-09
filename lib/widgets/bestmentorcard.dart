@@ -4,8 +4,11 @@ class BestMentorCard extends StatelessWidget {
   BestMentorCard({super.key});
 
   final List<String> assetPaths = [
-    "assets/nature1.png",
-    "assets/nature5.jpg",
+    "assets/images/nature1.png",
+    "assets/images/nature5.jpg",
+    "assets/images/nature2.png",
+    "assets/images/nature3.jpg",
+    "assets/images/nature4.jpg",
   ];
 
   final List<String> textPaths = [
@@ -32,9 +35,10 @@ class BestMentorCard extends StatelessWidget {
                   Card(
                     child: Image.asset(
                       assetPaths[index % assetPaths.length],
-                      fit: BoxFit.cover,
+                      fit: BoxFit.fill,
                     ),
                     color: Colors.black.withOpacity(0.3),
+                   
                   ),
                   SizedBox(height: 10),
                   Text(

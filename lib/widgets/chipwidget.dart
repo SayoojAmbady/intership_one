@@ -9,7 +9,7 @@ class ChipWidget extends StatelessWidget {
       height: 100,
       child: ListView(scrollDirection: Axis.horizontal, children: <Widget>[
         ActionChip(
-          label: Text("Personal"),
+          label: Text("Personal",),
           onPressed: () {},
         ),
         SizedBox(
