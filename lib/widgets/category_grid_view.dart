@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:intership_one/widgets/details_page.dart';
 
 class CategoryGridView extends StatelessWidget {
@@ -23,9 +24,10 @@ class CategoryGridView extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-               String categoryName = categories[index]['name'];
-              String imagePath = categories[index]['image'];
-              Navigator.push(context, MaterialPageRoute(builder:(context) => DetailsPage(categoryName: categoryName, imagePath: imagePath), ));
+                String categoryName = categories[index]['name'];
+               String imagePath = categories[index]['image'];
+              // Navigator.push(context, MaterialPageRoute(builder:(context) => DetailsPage(categoryName: categoryName, imagePath: imagePath), ));
+              Get.to(()=> DetailsPage(categoryName: categoryName, imagePath: imagePath));
             },
             child: Container(
               margin: EdgeInsets.all(8.0),
