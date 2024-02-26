@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-//import 'package:intership_one/Home/bottom.dart';
 import 'package:intership_one/widgets/splash_screen.dart';
 
 void main() {
@@ -17,7 +16,6 @@ class MyApp extends StatelessWidget {
         title: 'Design',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(useMaterial3: true),
-        //home: BottomBar()
         initialRoute: '/splash',
         getPages: [
         GetPage(name: '/splash', page: () => SplashScreen()),

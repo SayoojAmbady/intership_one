@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class DetailsPage extends StatelessWidget {
   final String categoryName;
-  final String imagePath; 
+  final String imagePath;
 
-  DetailsPage({required this.categoryName, required this.imagePath, Key? key}) 
+  DetailsPage({required this.categoryName, required this.imagePath, Key? key})
       : super(key: key);
 
   @override
@@ -17,7 +17,7 @@ class DetailsPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(imagePath), 
+            Image.asset(imagePath),
             SizedBox(height: 20),
             Text(categoryName),
           ],
